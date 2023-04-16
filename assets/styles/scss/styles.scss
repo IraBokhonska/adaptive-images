@@ -1,4 +1,5 @@
 @import "_null";
+
 //----------general----------
 body {
   width: 100%;
@@ -15,6 +16,7 @@ body {
   .main {
     flex: 1 1 auto;
   }
+
   .footer {
     min-height: 300px;
   }
@@ -59,13 +61,15 @@ body {
 }
 
 .text {
+  margin-top: 20px;
+
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   gap: 32px;
 }
 
-img {
+.image {
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -89,10 +93,6 @@ img {
     margin-bottom: 70px;
   }
 
-  &__image {
-
-  }
-
   &__subtitle {
     margin-top: 90px;
   }
@@ -112,23 +112,6 @@ img {
   gap: 90px;
 }
 
-.main__block {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  gap: 100px;
-  align-items: center;
-}
-
-.user-research__container {
-
-}
-
-.initial-sketches__container {
-}
-.final__container {
-}
-
 //--------------------footer-------------------
 .footer {
   min-height: 300px;
@@ -145,11 +128,23 @@ img {
     background-color: #F4F4F4;
   }
 
+  &__contacts-block {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 30px;
+  }
+
   &__title {
     font-weight: 400;
   }
 
   &__contact-list {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 15px;
+
     font-size: 16px;
     line-height: 27px;
     letter-spacing: 0.1em;
@@ -188,3 +183,24 @@ img {
     text-align: center;
   }
 }
+
+// hovers (я не знаю, як вмістити все в одне з &)
+
+.footer__icon-item:hover {
+  transition: 1s;
+  background-color: #565656;
+}
+
+.footer__icon-item:hover .icon-white {
+  transition: 0.5s;
+  fill: #FFFFFF;
+}
+
+.footer__icon-item:hover .icon-white:hover {
+  transition: 1s;
+  fill: #FFFFFF;
+}
+
+//--------------media-------------------
+
+@import "_media";
